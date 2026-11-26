@@ -1,7 +1,15 @@
-"""One Emoji, One Dream Vacation — make.fun text bounty entry.
+"""One Emoji, One Dream Vacation — make.fun text bounty entry (v2).
 
-Writes exactly one emoji, the person surfing (U+1F3C4), to
+Writes exactly one emoji, Mount Fuji (U+1F5FB), to
 $MAKEFUN_OUTPUT_DIR/entry.txt (default /output/entry.txt).
+
+Chosen by an internal pairwise tournament of 14 candidates judged on the
+published judge brief, in weight order: Mount Fuji beat the v1 entry
+(person surfing) on specificity (one particular mountain, one particular
+dream — Japan — rather than any surf anywhere) and on surprise (the field
+is full of beach and surf picks; a single named mountain is the fresh one),
+while matching it on plainly naming a dream vacation and on instant
+readability (one code point, bold silhouette at small size).
 
 Deterministic, Python standard library only. Self-verifies the entry:
 UTF-8 text, 1-8 characters, exactly one emoji, not whitespace-only.
@@ -12,7 +20,7 @@ import os
 import sys
 import unicodedata
 
-ENTRY = "\U0001F3C4"  # 🏄 person surfing
+ENTRY = "\U0001F5FB"  # 🗻 Mount Fuji
 
 # Unicode blocks that hold emoji (single code point, no variation selector
 # needed, so the entry is unambiguously exactly one emoji).
